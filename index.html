@@ -2,13 +2,206 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Подтверждение сайта для Google Merchant Center — не удалять. -->
     <meta
       name="google-site-verification"
       content="uousNKx5xQj5pj7K4Xv6K40IuOJfJltBg_MSaaXKHCI"
     />
-    <title>Test shop</title>
+    <title>Тестовый магазин</title>
+    <meta
+      name="description"
+      content="Тестовый онлайн-магазин электроники и техники для дома. Демонстрационный сайт, заказы не принимаются."
+    />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Test shop
+    <div class="notice">
+      Это тестовый сайт. Товары и цены вымышлены, заказы не принимаются.
+    </div>
+
+    <header>
+      <div class="wrap nav">
+        <a class="logo" href="#"
+          ><span class="logo-mark">Т</span>Тестовый магазин</a
+        >
+        <nav class="nav-links">
+          <a href="#catalog">Каталог</a>
+          <a href="#products">Хиты</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <a class="btn btn-ghost" href="#products">Корзина · 0</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <div>
+          <span class="badge">Демо-витрина</span>
+          <h1>Техника для дома — тестовый магазин</h1>
+          <p class="lead">
+            Учебная витрина интернет-магазина электроники и бытовой техники.
+            Используется для проверки интеграций и не продаёт реальных товаров.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Смотреть товары</a>
+            <a class="btn btn-ghost" href="#delivery">Как это работает</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">🛍️</div>
+      </div>
+
+      <section id="catalog">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Каталог</h2>
+            <span class="muted">4 тестовые категории</span>
+          </div>
+          <div class="cats">
+            <a class="cat" href="#products"
+              ><span class="cat-icon">📱</span>
+              <div><b>Смартфоны</b><span>12 товаров</span></div></a
+            >
+            <a class="cat" href="#products"
+              ><span class="cat-icon">💻</span>
+              <div><b>Ноутбуки</b><span>8 товаров</span></div></a
+            >
+            <a class="cat" href="#products"
+              ><span class="cat-icon">📺</span>
+              <div><b>Телевизоры</b><span>6 товаров</span></div></a
+            >
+            <a class="cat" href="#products"
+              ><span class="cat-icon">🧺</span>
+              <div><b>Бытовая техника</b><span>15 товаров</span></div></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="products">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Популярные товары</h2>
+            <span class="muted">Цены условные, в тенге</span>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div
+                class="card-img"
+                style="background: linear-gradient(135deg, #e0e7ff, #f5d0fe)"
+              >
+                📱
+              </div>
+              <div class="card-body">
+                <div class="card-title">Тестовый смартфон X1</div>
+                <div class="card-meta">6.5″, 128 ГБ, демо-модель</div>
+                <div class="card-foot">
+                  <span class="price"
+                    >149 990 ₸<span class="old">169 990 ₸</span></span
+                  ><span class="stock">В наличии</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div
+                class="card-img"
+                style="background: linear-gradient(135deg, #cffafe, #dbeafe)"
+              >
+                💻
+              </div>
+              <div class="card-body">
+                <div class="card-title">Тестовый ноутбук Pro 14</div>
+                <div class="card-meta">14″, 16 ГБ RAM, демо-модель</div>
+                <div class="card-foot">
+                  <span class="price">389 990 ₸</span
+                  ><span class="stock">В наличии</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div
+                class="card-img"
+                style="background: linear-gradient(135deg, #fde68a, #fecaca)"
+              >
+                📺
+              </div>
+              <div class="card-body">
+                <div class="card-title">Тестовый телевизор 55″</div>
+                <div class="card-meta">4K, Smart TV, демо-модель</div>
+                <div class="card-foot">
+                  <span class="price">259 990 ₸</span
+                  ><span class="stock out">Нет в наличии</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div
+                class="card-img"
+                style="background: linear-gradient(135deg, #bbf7d0, #a5f3fc)"
+              >
+                🧺
+              </div>
+              <div class="card-body">
+                <div class="card-title">Тестовая стиральная машина</div>
+                <div class="card-meta">7 кг, A+++, демо-модель</div>
+                <div class="card-foot">
+                  <span class="price"
+                    >219 990 ₸<span class="old">239 990 ₸</span></span
+                  ><span class="stock">В наличии</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap features">
+          <div class="feature">
+            <span class="cat-icon">🚚</span>
+            <h3>Доставка по Казахстану</h3>
+            <p>Условная доставка во все города — только для демонстрации.</p>
+          </div>
+          <div class="feature">
+            <span class="cat-icon">🛡️</span>
+            <h3>Гарантия</h3>
+            <p>
+              На тестовые товары действует тестовая гарантия: ровно ноль дней.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="cat-icon">💬</span>
+            <h3>Поддержка</h3>
+            <p>Вопросы по витрине — владельцу тестового сайта.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="delivery">
+        <div class="wrap info">
+          <div class="feature">
+            <h3>Доставка и оплата</h3>
+            <p>
+              Сайт не принимает заказы и платежи. Кнопки и корзина декоративные.
+            </p>
+            <p>Цены и наличие указаны для проверки отображения товаров.</p>
+          </div>
+          <div class="feature" id="contacts">
+            <h3>Контакты</h3>
+            <p>Тестовый магазин, Казахстан.</p>
+            <p>Сайт создан для проверки интеграции с Google Merchant Center.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <span>© Тестовый магазин</span>
+        <span>Демонстрационный сайт · не является реальным магазином</span>
+      </div>
+    </footer>
   </body>
 </html>
