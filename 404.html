@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Тестовый магазин</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/city.js"></script>
+  </head>
+  <body>
+    <div class="notice">
+      Это тестовый сайт. Товары и цены вымышлены, заказы не принимаются.
+    </div>
+
+    <header>
+      <div class="wrap nav">
+        <a class="logo" href="/"><span class="logo-mark">Т</span>Тестовый магазин</a>
+        <span class="city-pill">📍 <span data-city-name>Алматы</span></span>
+        <a class="btn btn-ghost" href="/#products">Корзина · 0</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="template" hidden>
+        <div class="wrap">
+          <nav class="crumbs muted">
+            <a href="/">Главная</a> / <a href="/#catalog">Каталог</a> / <span class="js-title"></span>
+          </nav>
+          <div class="product">
+            <div class="product-img" style="background: linear-gradient(135deg, #e5e7eb, #ddd6fe)">📦</div>
+            <div class="product-info">
+              <span class="badge">Шаблонная страница</span>
+              <h1 class="js-title"></h1>
+              <p class="muted">Артикул: <code class="js-slug"></code></p>
+              <div class="product-price">
+                <span class="price">Цена по запросу</span><span class="stock out">Нет данных</span>
+              </div>
+              <p class="lead">
+                Этого товара нет в тестовом каталоге — страница собрана автоматически по адресу.
+              </p>
+              <p class="muted">Доставка в город <b data-city-name>Алматы</b> — условная, только для демонстрации.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#list">Посмотреть товары</a>
+                <a class="btn btn-ghost" href="/">На главную</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="notfound" hidden>
+        <div class="wrap">
+          <span class="badge">404</span>
+          <h1>Страница не найдена</h1>
+          <p class="lead">Такой страницы нет. Посмотрите товары тестового магазина ниже.</p>
+        </div>
+      </section>
+
+      <section id="list">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Товары магазина</h2>
+            <span class="muted">Цены условные, в тенге</span>
+          </div>
+          <div class="grid">
+            <a class="card" href="/product/test-smartphone-x1/">
+              <div class="card-img" style="background: linear-gradient(135deg, #e0e7ff, #f5d0fe)">📱</div>
+              <div class="card-body">
+                <div class="card-title">Тестовый смартфон X1</div>
+                <div class="card-meta">6.5″, 128 ГБ, демо-модель</div>
+                <div class="card-foot"><span class="price">149 990 ₸<span class="old">169 990 ₸</span></span><span class="stock">В наличии</span></div>
+              </div>
+            </a>
+            <a class="card" href="/product/test-laptop-pro-14/">
+              <div class="card-img" style="background: linear-gradient(135deg, #cffafe, #dbeafe)">💻</div>
+              <div class="card-body">
+                <div class="card-title">Тестовый ноутбук Pro 14</div>
+                <div class="card-meta">14″, 16 ГБ RAM, демо-модель</div>
+                <div class="card-foot"><span class="price">389 990 ₸</span><span class="stock">В наличии</span></div>
+              </div>
+            </a>
+            <a class="card" href="/product/test-tv-55/">
+              <div class="card-img" style="background: linear-gradient(135deg, #fde68a, #fecaca)">📺</div>
+              <div class="card-body">
+                <div class="card-title">Тестовый телевизор 55″</div>
+                <div class="card-meta">4K, Smart TV, демо-модель</div>
+                <div class="card-foot"><span class="price">259 990 ₸</span><span class="stock out">Нет в наличии</span></div>
+              </div>
+            </a>
+            <a class="card" href="/product/test-washing-machine/">
+              <div class="card-img" style="background: linear-gradient(135deg, #bbf7d0, #a5f3fc)">🧺</div>
+              <div class="card-body">
+                <div class="card-title">Тестовая стиральная машина</div>
+                <div class="card-meta">7 кг, A+++, демо-модель</div>
+                <div class="card-foot"><span class="price">219 990 ₸<span class="old">239 990 ₸</span></span><span class="stock">В наличии</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <span>© Тестовый магазин</span>
+        <span>Демонстрационный сайт · не является реальным магазином</span>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var m = location.pathname.match(/^\/product\/([^\/]+)\/?$/);
+        var slug = null;
+        if (m) {
+          try { slug = decodeURIComponent(m[1]); } catch (e) { slug = m[1]; }
+        }
+        if (!slug) {
+          document.getElementById("notfound").hidden = false;
+          return;
+        }
+        var words = slug.replace(/[-_]+/g, " ").trim();
+        var title = words.charAt(0).toUpperCase() + words.slice(1);
+        document.title = title + " — Тестовый магазин";
+        document.querySelectorAll(".js-title").forEach(function (el) { el.textContent = title; });
+        document.querySelectorAll(".js-slug").forEach(function (el) { el.textContent = slug; });
+        document.getElementById("template").hidden = false;
+        document.querySelector("#list h2").textContent = "Другие товары";
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "test-smartphone-x1",
+    "title": "Тестовый смартфон X1",
+    "meta": "6.5″, 128 ГБ, демо-модель",
+    "description": "Демонстрационный смартфон с экраном 6.5″ и памятью 128 ГБ. Товар вымышленный, используется для проверки интеграций.",
+    "icon": "📱",
+    "gradient": "linear-gradient(135deg, #e0e7ff, #f5d0fe)",
+    "category": "Смартфоны",
+    "price": 149990,
+    "old_price": 169990,
+    "in_stock": true
+  },
+  {
+    "slug": "test-laptop-pro-14",
+    "title": "Тестовый ноутбук Pro 14",
+    "meta": "14″, 16 ГБ RAM, демо-модель",
+    "description": "Демонстрационный ноутбук с экраном 14″ и 16 ГБ оперативной памяти. Товар вымышленный, используется для проверки интеграций.",
+    "icon": "💻",
+    "gradient": "linear-gradient(135deg, #cffafe, #dbeafe)",
+    "category": "Ноутбуки",
+    "price": 389990,
+    "old_price": null,
+    "in_stock": true
+  },
+  {
+    "slug": "test-tv-55",
+    "title": "Тестовый телевизор 55″",
+    "meta": "4K, Smart TV, демо-модель",
+    "description": "Демонстрационный телевизор 55″ с разрешением 4K и Smart TV. Товар вымышленный, используется для проверки интеграций.",
+    "icon": "📺",
+    "gradient": "linear-gradient(135deg, #fde68a, #fecaca)",
+    "category": "Телевизоры",
+    "price": 259990,
+    "old_price": null,
+    "in_stock": false
+  },
+  {
+    "slug": "test-washing-machine",
+    "title": "Тестовая стиральная машина",
+    "meta": "7 кг, A+++, демо-модель",
+    "description": "Демонстрационная стиральная машина на 7 кг с классом энергопотребления A+++. Товар вымышленный, используется для проверки интеграций.",
+    "icon": "🧺",
+    "gradient": "linear-gradient(135deg, #bbf7d0, #a5f3fc)",
+    "category": "Бытовая техника",
+    "price": 219990,
+    "old_price": 239990,
+    "in_stock": true
+  }
+]
